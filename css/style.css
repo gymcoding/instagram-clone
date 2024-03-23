@@ -1,0 +1,26 @@
+/* ------------------------------ GOOGLE FONTS ------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* ---------------------------------- BASE ---------------------------------- */
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* ---------------------------------- FONTS --------------------------------- */
+.font-weight-medium {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-weight-bold {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-weight-black {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
