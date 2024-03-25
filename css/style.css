@@ -13,11 +13,11 @@
   --red-color: #b71c1c;
 
   /* --------------------------------- Brand Colors -------------------------------- */
-  --primary-color: var(--color-blue);
+  --primary-color: var(--blue-color);
   --secondary-color: #26a69a;
   --accent-color: #9c27b0;
   --positive-color: #21ba45;
-  --negative-color: var(--color-red);
+  --negative-color: var(--red-color);
   --info-color: #31ccec;
   --warning-color: #f2c037;
   --dark-color: #1d1d1d;
