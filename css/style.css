@@ -73,6 +73,66 @@ body {
   font-style: normal;
 }
 
+/* --------------------------------- Layout --------------------------------- */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 var(--ms-1);
+}
+
+/* --------------------------------- Header --------------------------------- */
+.header {
+  background-color: var(--white-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.nav {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-weight-black);
+}
+
+.nav__toggle {
+  display: none;
+}
+.nav__list {
+  display: flex;
+}
+.nav__item {
+  margin-left: var(--ms-3);
+}
+.nav__link {
+  position: relative;
+}
+.active-link::after {
+  position: absolute;
+  height: 0.18rem;
+  background-color: var(--primary-color);
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 2rem;
+}
+.nav__link:hover {
+  position: relative;
+}
+.nav__link:hover::after {
+  position: absolute;
+  height: 0.18rem;
+  background-color: var(--primary-color);
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 2rem;
+}
+
 /* ---------------------------------- Home ---------------------------------- */
 .home__title {
   font-size: var(--font-size-2);
