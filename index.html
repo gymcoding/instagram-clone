@@ -55,11 +55,13 @@
 
     <main class="main">
       <!-- -------------------------------- HOME --------------------------------- -->
-      <section class="home" id="home">
-        <div>
+      <section class="home container" id="home">
+        <div class="home__data">
           <h1 class="home__title">
-            안녕하세요! <br />코딩 교육 크리에이터<br />
-            <strong>짐코딩</strong>입니다!
+            안녕하세요! <br />
+            <strong class="home__title-color">코딩 교육 크리에이터</strong
+            ><br />
+            <strong class="home__title-color">짐코딩</strong>입니다!
           </h1>
 
           <a href="#contact" class="button">Contact</a>
@@ -70,27 +72,29 @@
               target="_blank"
               title="짐코딩 유튜브 링크"
             >
-              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-youtube home__social-icon"></i>
             </a>
             <a
               href="https://www.instagram.com/gymcoding/"
               target="_blank"
               title="짐코딩 인스타그램 링크"
             >
-              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-instagram home__social-icon"></i>
             </a>
             <a
               href="https://github.com/gymcoding"
               target="_blank"
               title="짐코딩 깃허브 링크"
             >
-              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-github home__social-icon"></i>
             </a>
           </div>
         </div>
-        <div>
-          <img src="images/profile.gif" alt="짐코딩 프로필 이미지" />
-        </div>
+        <img
+          class="home__img"
+          src="images/profile.gif"
+          alt="짐코딩 프로필 이미지"
+        />
       </section>
 
       <!-- -------------------------------- ABOUT -------------------------------- -->
