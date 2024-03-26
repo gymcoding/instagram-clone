@@ -13,7 +13,7 @@
   --red-color: #b71c1c;
 
   /* --------------------------------- Brand Colors -------------------------------- */
-  --primary-color: var(--blue-color);
+  --primary-color: #3e6ef4;
   --secondary-color: #26a69a;
   --accent-color: #9c27b0;
   --positive-color: #21ba45;
@@ -149,8 +149,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: var(--ms-4);
-  padding-bottom: var(--ms-4);
+  padding-top: var(--ms-5);
+  padding-bottom: var(--ms-5);
 }
 .home__title {
   font-size: var(--font-size-2);
@@ -304,4 +304,25 @@ body {
   background: var(--primary-color);
   border-radius: 12px;
   width: 48px;
+}
+/* ---------------------------------- Work ---------------------------------- */
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.work__link {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-1);
+}
+
+.work__img {
+  width: 100%;
+  transition: 0.5s;
+  display: block;
+}
+.work__img:hover {
+  transform: scale(1.05);
 }
