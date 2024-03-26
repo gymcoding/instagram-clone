@@ -352,3 +352,31 @@ body {
   margin-left: auto;
   display: block;
 }
+
+/* --------------------------------- Footer --------------------------------- */
+
+.footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 3rem 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.footer__title {
+  font-size: 1.75rem;
+  margin-bottom: var(--ms-4);
+}
+.footer__social {
+  margin-bottom: var(--ms-4);
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+.footer__icon {
+  font-size: 1.2rem;
+}
+.footer__copy {
+  font-style: var(--font-size-6);
+  font-weight: var(--font-weight-medium);
+}
