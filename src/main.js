@@ -13,13 +13,45 @@ function init() {
   const $navLinkList = document.querySelectorAll('.nav__link');
   $navLinkList.forEach((n) => n.addEventListener('click', toggleMenu));
 
-  const $body = document.querySelector('body');
-  $body.addEventListener('click', () => {
+  document.addEventListener('click', (e) => {
+    e.stopPropagation();
     const $navMenu = document.getElementById('nav-menu');
     if ($navMenu.classList.contains('show')) {
       $navMenu.classList.remove('show');
     }
   });
+
+  handleIntersectionObserver();
 }
 
 init();
+
+function handleIntersectionObserver() {
+  // IntersectionObserver 등록
+  const options = {
+    root: null,
+    // 타겟 이미지 접근 전 이미지를 불러오기 위해 rootMargin을 설정했습니다.
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 1,
+  };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const sectionId = entry.target.id;
+
+      if (entry.isIntersecting) {
+        // 관찰 대상이 viewport 안에 들어온 경우 'active' 클래스 추가
+        document
+          .querySelector(`.nav__link[href*=${sectionId}]`)
+          .classList.add('active-link');
+        const disables = document.querySelectorAll(
+          `.nav__link:not([href*=${sectionId}])`,
+        );
+        disables.forEach((el) => el.classList.remove('active-link'));
+      }
+    });
+  }, options);
+
+  // 관찰할 대상을 선언하고, 해당 속성을 관찰
+  const sectionList = document.querySelectorAll('.section');
+  sectionList.forEach((el) => io.observe(el));
+}
