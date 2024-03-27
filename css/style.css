@@ -63,6 +63,7 @@ body {
   font-family: var(--body-font);
   color: var(--black-color);
   margin-top: var(--header-height);
+  font-size: var(--font-size-5);
 }
 
 /* ---------------------------------- FONTS --------------------------------- */
