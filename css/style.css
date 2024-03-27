@@ -199,8 +199,8 @@ body {
 
 /* --------------------------------- Section -------------------------------- */
 .section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: calc(var(--header-height) + 1rem);
+  padding-bottom: calc(var(--header-height) + 1rem);
 }
 .section__title {
   position: relative;
