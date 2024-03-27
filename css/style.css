@@ -173,9 +173,10 @@ body {
 }
 .home__social {
   margin-top: var(--ms-3);
+  display: flex;
+  column-gap: var(--ms-1);
 }
 .home__social-icon {
-  margin-right: var(--ms-1);
   font-size: 1.5rem;
   transition: 0.3s;
 }
@@ -420,5 +421,18 @@ body {
   }
   .nav__link {
     color: var(--white-color);
+  }
+
+  /* ---------------------------------- Home ---------------------------------- */
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .home__title {
+    margin-top: var(--ms-3);
+  }
+  .home__social {
+    justify-content: center;
   }
 }
