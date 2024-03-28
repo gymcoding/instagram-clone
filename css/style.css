@@ -62,6 +62,9 @@
     --header-height: 3rem;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* ---------------------------------- BASE ---------------------------------- */
 body {
@@ -457,4 +460,30 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
   }
+}
+
+/* ----------------------------- Floating Button ---------------------------- */
+/* 버튼 스타일 */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 버튼 호버 효과 */
+.floating-button:hover {
+  background-color: var(--primary-color);
+}
+
+.floating-button-icon {
+  font-size: 1.2rem;
 }

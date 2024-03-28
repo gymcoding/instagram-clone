@@ -75,3 +75,12 @@ scrollReveal.reveal('.home__social-icon', { interval: 200 });
 scrollReveal.reveal('.skills__data, .work__link, .contact__input', {
   interval: 200,
 });
+
+/* -------------------------- Floating Button Click ------------------------- */
+const $floatingButton = document.getElementById('floating-button');
+$floatingButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
