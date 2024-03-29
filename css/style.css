@@ -120,6 +120,20 @@ body {
   font-weight: var(--font-weight-black);
 }
 
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav__img {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+}
+.nav__brand {
+  font-size: var(--font-size-4);
+}
+
 .nav__toggle {
   display: none;
 }
