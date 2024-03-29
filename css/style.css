@@ -245,7 +245,7 @@ body {
 .about__container {
   display: flex;
   align-items: center;
-  column-gap: 4rem;
+  column-gap: 3rem;
 }
 .about__subtitle {
   font-size: var(--font-size-4);
@@ -259,7 +259,7 @@ body {
   justify-self: center;
 }
 .about__img img {
-  width: 300px;
+  max-width: 310px;
   border-radius: 0.5rem;
 }
 
