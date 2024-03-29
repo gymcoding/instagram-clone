@@ -84,3 +84,15 @@ $floatingButton.addEventListener('click', () => {
     behavior: 'smooth',
   });
 });
+
+// 짐코딩
+// eslint-disable-next-line no-undef
+new TypeIt('#typeit', {
+  strings: [
+    '안녕하세요!',
+    '<strong class="home__title-color">코딩 교육 크리에이터</strong>',
+    '<strong class="home__title-color">짐코딩</strong>입니다!',
+  ],
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
