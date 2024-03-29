@@ -88,11 +88,43 @@ $floatingButton.addEventListener('click', () => {
 // 짐코딩
 // eslint-disable-next-line no-undef
 new TypeIt('#typeit', {
-  strings: [
-    '안녕하세요!',
-    '<strong class="home__title-color">코딩 교육 크리에이터</strong>',
-    '<strong class="home__title-color">짐코딩</strong>입니다!',
-  ],
-  speed: 50,
+  speed: 70,
+  startDelay: 1300,
   waitUntilVisible: true,
-}).go();
+})
+  .type('안녕하세요!<br />')
+  .type('<strong class="home__title-color">코딩 교육 크리에이터</strong><br />')
+  .type('<strong class="home__title-color">GYMCODING</strong>', { delay: 300 })
+  .delete(9, { delay: 300 })
+  .type('<strong class="home__title-color">짐코딩</strong>입니다!')
+
+  .go();
+// strings: [
+//   '안녕하세요!',
+//   '<strong class="home__title-color">코딩 교육 크리에이터</strong>',
+//   '<strong class="home__title-color">짐코딩</strong>입니다!',
+// ],
+
+document
+  .getElementById('contactForm')
+  .addEventListener('submit', function (event) {
+    event.preventDefault(); // 기본 동작 중단
+
+    // 입력값 가져오기
+    const to = 'bruce.lean17@gmail.com';
+    const name = window.contactForm.name.value;
+    const subject = window.contactForm.subject.value;
+    const message = window.contactForm.message.value;
+
+    // 이메일 링크 생성
+    const mailtoLink =
+      'mailto:' +
+      encodeURIComponent(to) +
+      '?subject=' +
+      encodeURIComponent(`[${name}님 문의] ${subject}`) +
+      '&body=' +
+      encodeURIComponent(message);
+
+    // 이메일 클라이언트 열기
+    window.location.href = mailtoLink;
+  });

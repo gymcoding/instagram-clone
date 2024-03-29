@@ -1,6 +1,7 @@
 /* ------------------------------ GOOGLE FONTS ------------------------------ */
 /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Song+Myung&display=swap');
 
 /* ------------------------------ Variables CSS ----------------------------- */
 :root {
@@ -21,7 +22,7 @@
   --negative-color: var(--red-color);
   --info-color: #31ccec;
   --warning-color: #f2c037;
-  --dark-color: #1d1d1d;
+  --dark-color: #191919;
 
   /* ------------------------------- Font Weight ------------------------------ */
   --font-weight-medium: 400;
@@ -103,7 +104,9 @@ body {
 
 /* --------------------------------- Header --------------------------------- */
 .header {
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
+  background-color: var(--dark-color);
+  color: var(--white-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -132,6 +135,7 @@ body {
 }
 .nav__brand {
   font-size: var(--font-size-4);
+  font-family: 'Song Myung', serif;
 }
 
 .nav__toggle {
@@ -146,18 +150,10 @@ body {
 .nav__link {
   position: relative;
 }
-.active-link::after {
-  position: absolute;
-  height: 0.18rem;
-  background-color: var(--primary-color);
-  content: '';
-  width: 100%;
-  left: 0;
-  top: 2rem;
-}
 .nav__link:hover {
   position: relative;
 }
+.active-link::after,
 .nav__link:hover::after {
   position: absolute;
   height: 0.18rem;
@@ -179,7 +175,7 @@ body {
 .home__title {
   font-size: var(--font-size-2);
   line-height: calc(var(--font-size-2) * 1.4);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
   margin-bottom: var(--ms-3);
 }
 .home__title-color {
@@ -225,26 +221,27 @@ body {
   font-size: var(--font-size-3);
   color: var(--primary-color);
   text-align: center;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
   margin-bottom: var(--ms-5);
 }
 .section__title::after {
   position: absolute;
   content: '';
   width: 64px;
-  height: 0.18rem;
+  height: 0.25rem;
   background-color: var(--primary-color);
   left: 0;
   right: 0;
-  top: 3.5rem;
+  top: 3rem;
   margin: 0 auto;
 }
 
 .bg-grey-1 {
-  background-color: #eee;
+  background-color: #f6f6f6;
 }
 
 /* ---------------------------------- About --------------------------------- */
+
 .about__container {
   display: flex;
   align-items: center;
@@ -253,7 +250,7 @@ body {
 .about__subtitle {
   font-size: var(--font-size-4);
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--ms-1);
+  margin-bottom: var(--ms-2);
 }
 .about__text {
   line-height: 1.4rem;
@@ -454,6 +451,13 @@ body {
     justify-content: center;
   }
 
+  /* --------------------------------- Section -------------------------------- */
+
+  .section__title::after {
+    height: 0.2rem;
+    top: 2.5rem;
+  }
+
   /* ---------------------------------- About --------------------------------- */
   .about__container {
     flex-direction: column;
@@ -483,7 +487,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: #fff;
   width: 50px;
   height: 50px;
